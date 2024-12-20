@@ -1,0 +1,45 @@
+*{
+    margin:0;
+    padding:0;
+    
+}
+
+body{
+color: black;
+font-family: 'Times New Roman', Times, serif;
+font-size:large;
+display: grid;
+place-content: center;
+min-height: 100vh;
+min-width: 100vw;
+background-color: #c5c6c7;
+
+}
+
+.description{
+    margin: 2rem 4rem;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid purple;
+    padding: 2rem 4rem;
+    top: 4rem;
+}
+:root{
+--border_color :purple;
+--button:#3EC5EF;
+}
+
+button{
+    background-color: #3EC5EF;
+    align-content: center;
+    align-items: center;
+    color :black;
+    width: 8rem;
+    height: 4rem;
+    padding: 0.5rem;
+    border:1px solid purple;
+    margin-inline-start: 2rem auto;
+
+
+
+}
