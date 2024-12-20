@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'CSS/Login.css' %}">
+</head>
+<body>
+    <nav class="nav">
+        <ul>
+           <li><a href="#">Home</a></li>
+           <li><a href="Registar.html">Lawyer</a></li>
+           <li><a href="Judge.html">Judge</a></li>
+    
+        </ul>
+        <input type="search" placeholder="search" id="search">
+    </nav>
+
+
+    <div class="login">
+        <div class=" user">
+            
+
+            <form action="" method="post">
+                <h3>LOGIN AS <select name="Acc-type" id="Acc-type">
+                    <option value="">Select your Account
+                    </option>
+                    <option value=""><a href="Home.html">Registar</a>
+                    </option>
+                    <option value="">Lawyer
+                    </option>
+                    <option value="">Judge
+                    </option>
+                </select></h3>
+                <label for="Name">Name <input type="text" name="Name" id="Name" placeholder="Type name ...." required></label>
+                <label for="Email">Email <input type="email" id="Email" name=" Email" placeholder ="Type Email here...."></label>
+                <label for="Password">Password <input type="password" name="Password" id="Password" required placeholder="Enter your Password ..."></label>
+                <label for="Account"> <input type="radio" name="Account" id="Account">
+ Judge</label>
+                <label for="Account"><input type="radio" name="Account" id="Account">
+ User</label>
+                <p>Forgot your Password ? <a href="#">Recover it</a></p>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>

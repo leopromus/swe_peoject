@@ -1,0 +1,93 @@
+
+
+body{
+    background-color: #c5c6c7;
+}
+.login{
+    color: black;
+    font-size: large;
+    display: grid;
+    justify-content: center
+    ;
+    place-content: center;
+    padding: 2rem auto;
+    margin: 3rem;
+    
+    
+}
+
+.user{
+    border: 1px solid purple;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 10px;
+    
+}
+
+form{
+    display: flex;
+        flex-direction: column;
+        gap: 10px;
+    width: 40vw;
+    padding: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+input,button,select{
+    padding: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        border:1px purple;
+}
+button{
+    background-color: #3EC5EF;
+        align-content: center;
+        align-items: center;
+        color: black;
+        width: 8rem;
+        height: 4rem;
+        padding: 0.5rem;
+        border: 1px solid purple;
+        margin-inline-start: 2rem auto;
+}
+
+button:hover{
+    background-color: darkgreen;
+}
+
+
+
+nav{
+    background-color: darkslategray;
+    margin:-2rem;
+    display: grid;
+    grid-template-columns: 70% 30% 1fr;
+    
+    
+    
+}
+
+ul{
+    display:flex;
+    gap: 3rem;
+    list-style: none;
+    text-decoration: none;
+    padding: 2rem;
+}
+
+ul a {
+    color: white;
+    text-decoration: none;
+    font-size: large;
+}
+#search{
+    margin: 2rem;
+
+}
+
+ul a:hover{
+    
+    color: black;
+    padding: 1rem;
+    border-bottom: 0.1rem solid black;
+}
