@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Case Detail{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="mb-4">Case Details</h1>
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <p><strong>Defendant Name:</strong> {{ case.defendant_name }}</p>
+            <p><strong>Status:</strong> {{ case.status }}</p>
+            <p><strong>Judgment Summary:</strong> {{ case.judgment_summary }}</p>
+        </div>
+        <div class="card-footer text-end">
+            <a href="{% url 'case_edit' case.CIN %}" class="btn btn-primary me-2">
+                <i class="bi bi-pencil-square"></i> Edit
+            </a>
+            <a href="{% url 'case_delete' case.CIN %}" class="btn btn-danger me-2">
+                <i class="bi bi-trash"></i> Delete
+            </a>
+            <a href="{% url 'case_list' %}" class="btn btn-secondary">
+                <i class="bi bi-arrow-left"></i> Back to Case List
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %}Search Cases{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <h1 class="mb-4 text-center">Search Court Cases</h1>
+
+    <!-- Search Form -->
+    <form method="get" action="{% url 'search_cases' %}" class="row g-3 mb-4">
+        <div class="col-md-10">
+            {{ form.as_p }}
+        </div>
+        <div class="col-md-2 d-flex align-items-end">
+            <button type="submit" class="btn btn-primary w-100">Search</button>
+        </div>
+    </form>
+
+    <!-- Search Results -->
+    <h2 class="mb-3">Results</h2>
+    {% if cases %}
+        <ul class="list-group">
+            {% for case in cases %}
+                <li class="list-group-item">
+                    <a href="{% url 'case_detail' CIN=case.CIN %}" class="text-primary fw-bold">
+                        {{ case.defendant_name }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p class="text-center text-muted">No results found. Try a different search term.</p>
+    {% endif %}
+
+    <div class="text-center mt-4">
+        <a href="{% url 'home' %}" class="btn btn-secondary">
+            <i class="bi bi-arrow-left"></i> Back to Home
+        </a>
+    </div>
+</div>
+{% endblock %}
