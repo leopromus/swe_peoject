@@ -1,3 +1,5 @@
+from doctest import master
+
 from django.contrib.auth.models import AbstractUser, BaseUserManager
 from django.db import models
 
@@ -66,3 +68,6 @@ class Payment(models.Model):
     court_case = models.ForeignKey(CourtCase, on_delete=models.CASCADE)
     amount = models.DecimalField(max_digits=10, decimal_places=2)
     date = models.DateTimeField(auto_now_add=True)
+
+
+
